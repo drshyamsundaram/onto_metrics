@@ -1,0 +1,17 @@
+# onto_metrics run configuration
+ontology:
+  path: "./examples/ontology/finance_ontology.ttl"  # path to ontology file
+  format: "auto"   # auto | turtle | xml (RDF/XML, .owl) | n3 | nt | json-ld | trig
+
+metrics:
+  level: "normal"          # normal (default) | enhanced
+  include_categories: []    # optional: restrict to these categories only
+  exclude: []                # optional: metric ids, "PREFIX." groups, or category names
+  thresholds: {}            # optional: per-metric warn/fail/target overrides
+  profiles: []                # optional: opt-in profiles, e.g. ["onto_field_contract"]
+  max_details: 50
+
+output:
+  dir: "./out"
+  metrics_file: "ontology_metrics.json"
+  markdown_file: "ontology_metrics.md"
